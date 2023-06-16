@@ -8,10 +8,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { FeedComponent } from './pages/feed/feed.component';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { LocationsComponent } from './pages/locations/locations.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
-import { LocationDetailComponent } from './pages/locations/locations-detail/location-detail/location-detail.component';
 import { LocationsDetailComponent } from './pages/locations/locations-detail/locations-detail.component';
 
 @NgModule({
@@ -21,10 +19,8 @@ import { LocationsDetailComponent } from './pages/locations/locations-detail/loc
     SignupComponent,
     SigninComponent,
     FeedComponent,
-    ProfileComponent,
     LocationsComponent,
     UserprofileComponent,
-    LocationDetailComponent,
     LocationsDetailComponent
   ],
   imports: [
