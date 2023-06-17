@@ -12,7 +12,10 @@ import { LocationsComponent } from './pages/locations/locations.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
 import { LocationsDetailComponent } from './pages/locations/locations-detail/locations-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import {MatCardModule} from '@angular/material/card';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
   ],
   bootstrap: [AppComponent]
 })

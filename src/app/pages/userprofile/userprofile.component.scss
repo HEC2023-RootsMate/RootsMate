@@ -1,0 +1,100 @@
+body {
+    background-color: #f0f5f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.profile-section,
+.location-section {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.locations-display-section {
+    flex: 1;
+    margin-left: 10px;
+}
+
+h1 {
+    color: #1e3932;
+    text-align: center;
+}
+
+.profile-picture {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+form {
+    background-color: #c2d6d6;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+label {
+    color: #1e3932;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: #1e3932;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #829b8b;
+    cursor: not-allowed;
+}
+
+.locations-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .profile-section,
+    .location-section,
+    .locations-display-section {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

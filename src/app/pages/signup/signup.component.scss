@@ -1,0 +1,49 @@
+body {
+    background-color: #f0f5f5;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #1e3932;
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #c2d6d6;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+label {
+    color: #1e3932;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    box-sizing: border-box; // Add this line
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: #1e3932;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #829b8b;
+    cursor: not-allowed;
+}
