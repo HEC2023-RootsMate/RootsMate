@@ -1,1 +1,7 @@
-<p>locations-detail works!</p>
+<div *ngIf="location">
+    <h1>{{ location.name }}</h1>
+    <img [src]="location.url_image" alt="{{ location.name }}">
+    <p>{{ location.description }}</p>
+    <p>Tags: {{ location.tags.join(', ') }}</p>
+    <p>Date de création : {{ location.createdate | date:'longDate' }}</p>
+</div>

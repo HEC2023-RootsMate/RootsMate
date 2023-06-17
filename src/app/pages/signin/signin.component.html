@@ -1,1 +1,14 @@
-<p>signin works!</p>
+<div>
+    <h1>Connexion</h1>
+    <form (ngSubmit)="onSubmit()" #signInForm="ngForm">
+        <div>
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
+        </div>
+        <button type="submit" [disabled]="!signInForm.form.valid">Se connecter</button>
+    </form>
+</div>
