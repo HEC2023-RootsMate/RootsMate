@@ -11,6 +11,8 @@ import { FeedComponent } from './pages/feed/feed.component';
 import { LocationsComponent } from './pages/locations/locations.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
 import { LocationsDetailComponent } from './pages/locations/locations-detail/locations-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { LocationsDetailComponent } from './pages/locations/locations-detail/loc
     LocationsDetailComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule,
+    MatCardModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

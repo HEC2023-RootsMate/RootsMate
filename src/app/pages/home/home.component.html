@@ -1,1 +1,26 @@
-<p>home works!</p>
+<div class="home-container">
+	<div class="title">
+	  RootsMate
+	</div>
+	<div class="header">
+	  <div class="header-title">
+		Connectez-vous à la communauté florissante du jardinage et partagez vos passions végétales avec le monde entier !
+	  </div>
+	</div>
+  
+	<div class="content">
+	  <div class="carousel">
+		<ngb-carousel *ngIf="images">
+		  <ng-template *ngFor="let image of images" ngbSlide>
+			<div class="gardens">
+			  <div class="image-container">
+				<img [src]="image.src" class="carousel-image" />
+			  </div>
+			  <h3>{{ image.text }}</h3>
+			</div>
+		  </ng-template>
+		</ngb-carousel>
+	  </div>
+	</div>
+  </div>
+  
