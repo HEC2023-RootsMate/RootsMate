@@ -17,6 +17,8 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ComponentsModule } from './components/components.module';
+import { ServicesModule } from './services/services.module';
 
 
 @NgModule({
@@ -33,13 +35,14 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     AppRoutingModule,
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
     MatCardModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ComponentsModule,
+    ServicesModule
   ],
   bootstrap: [AppComponent]
 })
