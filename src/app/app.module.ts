@@ -25,12 +25,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     LocationsDetailComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
