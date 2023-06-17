@@ -1,1 +1,32 @@
-<router-outlet></router-outlet>
+<!-- <mat-drawer-container class="home-container" autosize>
+    <mat-drawer #drawer class="home-sidenav" mode="over">
+        <p>Auto-resizing sidenav</p>
+        <p>Profile</p>
+    </mat-drawer>
+
+    <div class="sidenav-content">
+        <div *ngIf="user.picture">
+            <img [src]="user.picture" alt="Image de profil" class="profile-picture"
+                (click)="showFiller = !showFiller" />
+        </div>
+
+        {{showFiller}}
+
+    </div>
+
+</mat-drawer-container> -->
+
+<mat-drawer-container class="home-container" autosize>
+    <mat-drawer #drawer class="home-sidenav" mode="over">
+      <app-userprofile></app-userprofile>
+    </mat-drawer>
+  
+    <div class="home-sidenav-content">
+        <div *ngIf="user.picture">
+            <img [src]="user.picture" alt="Image de profil" class="profile-picture"
+            (click)="drawer.toggle()" />
+        </div>
+    </div>
+  
+    <router-outlet></router-outlet>
+  </mat-drawer-container>

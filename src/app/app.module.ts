@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSidenavModule
   ],
   bootstrap: [AppComponent]
 })

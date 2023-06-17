@@ -1,4 +1,38 @@
 @font-face {
-    font-family: 'Jost-Regular';
-    src: url('../assets/fonts/Jost-Regular.ttf');
+  font-family: 'Jost-Regular';
+  src: url('../assets/fonts/Jost-Regular.ttf');
+}
+
+.profile-picture {
+  position: fixed;
+
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  top: 40px;
+  left: 40px;
+  background-color: #0C9;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.home-container {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.home-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-sidenav {
+  padding: 20px;
 }

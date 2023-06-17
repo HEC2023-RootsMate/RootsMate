@@ -36,9 +36,6 @@ export class UserprofileComponent implements OnInit {
       const userLocationIds = this.locationUsers.filter(lu => lu.id_user === this.user.id_user).map(lu => lu.id_location);
       this.locations = allLocations.filter((loc: Location) => userLocationIds.includes(loc.id_location));
     }
-
-
-
   }
 
   onUpdateProfile() {
