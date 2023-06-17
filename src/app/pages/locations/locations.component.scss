@@ -1,15 +1,27 @@
-.search {
-    width: auto;
-    max-width: 400px;
+mat-form-field {
+    width: 100%;
+  }
+  
+  /* 1st solution - causes weird thing at the left side of input */
+  ::ng-deep .mat-form-field-outline-start {
+    border-radius: 28px 0 0 28px !important;
+    min-width: 28px !important;
+  }
+
+.map {
+    // width: 70%;
+    max-width: 450px;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
 }
 
-::ng-deep .search {
-    border-radius: 28px 0 0 28px !important;
-    min-width: 28px !important;
-}
+.map img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
 
 h1 {
     color: #1e3932;
@@ -19,6 +31,13 @@ h1 {
 
 .locations {
     padding: 30px;
+    // max-width: 400px;
+    // margin-bottom: 30px;
+    // margin-left: auto;
+    // margin-right: auto;
+}
+
+.locations-display {
     max-width: 400px;
     margin-bottom: 30px;
     margin-left: auto;
