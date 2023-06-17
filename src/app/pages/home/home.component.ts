@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = [
+    {src: '/assets/images/nature/1.jpeg', text: 'Jardin tropical de Coco'},
+    {src: '/assets/images/nature/2.jpeg', text: 'Petit jardin de Busra'},
+    {src: '/assets/images/nature/3.jpeg', text: 'Terrain communautaire de Lucas'}
+  ];
 }
