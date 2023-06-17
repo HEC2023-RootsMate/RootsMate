@@ -1,20 +1,45 @@
+@import 'node_modules/aos/src/sass/aos.scss';
 .home-container {
-    font-family: 'Jost-Regular';
-    background-color: #2a9d8f;
-    color: #264653;
-  
+    font-family: 'Basteleur-Bold';
+    color: #223634 !important;
+
+    .main-header {
+      background-image: url('../../../assets/images/background/Plan_de_travail_1_copie_2.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh
+    }
+    .mat-toolbar-row, .mat-toolbar-single-row {
+      background: none;
+      font-family: 'Basteleur-Bold';
+    }
+    
+    button {
+      background: none;
+      border: none;
+      font-family: 'Basteleur-Bold';
+      color: #223634;
+      font-size: 0.5em;
+    }
+    .spacer {
+        flex: 1 1 auto;
+      }
+
     .title {
-      font-size: 6em;
+      font-size: 5em;
       padding: 1em;
       display: flex;
       justify-content: center;
+      line-height: 1em;
+      margin-right: 3em;
+      margin-left: 3em;
     }
   
     .header {
         padding: 1em;
         display: flex;
         justify-content: center;
-        border-bottom: 1px solid #e9c46a;
+        padding-bottom: 2em;
         .header-title {
             font-size: 3em;
             line-height: 1em;
@@ -23,23 +48,121 @@
     }
     .content {
       padding: 2em;
+      display: flex;
+      flex-direction: column;
+      background-color: #7F8114;
+      .content-title {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.5em;
+        padding-bottom: 2em;
+        color: #E3E3E3;
+      }
       .carousel {
+        width: calc(100% - 150px);
+        margin-right: auto;
+        margin-left: auto;
+        .carousel-inner {
+          overflow: visible;
+        }
         .gardens {
+            border-radius: 20px;
+            background-color: #E3E3E3;
+            margin-right: 2em;
+            margin-left: 2em;
           .image-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: calc(100vh - 100px);
+            height: calc(100vh - 300px);
             .carousel-image {
-                width: 500px;
-                height: calc(100vh - 100px);
+                width: 100%;
+                height: calc(100vh - 300px);
                 object-fit: cover;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
             }
-          }
-          h3 {
-              font-size: 1.75em;
           }
         }
       }
+      .functionalities {
+          height: 700px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .first {
+            display: flex;
+            padding-top: 5em;
+            height: 10em;
+            margin-bottom: 66px;
+            width: calc(100% - 300px);
+            .functionality-icon {
+              width: 10em;
+              height: 10em;
+              border-radius: 50%;
+              background-color: #E2C956;
+              position: relative;
+            }
+          }
+          .functionality {
+            padding-left: 2em;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            color: #C9C9C9;
+            .functionality-title {
+              min-height: 2em;
+              font-size: 1.5em;
+            }
+            .functionality-content {
+              height: 100%;
+              font-family: 'DM-Sans';
+            }
+          }
+      }
+    }
+
+    .join-us {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 6em;
+      .title2 {
+        font-size: 2em;
+        padding-bottom: 1em;
+      }
+
+      .btn-join {
+        font-size: 1em;
+        font-family: 'DM-Sans';
+        background-color: #7F8114;
+        border-radius: 50px;
+        width: 200px;
+        height: 30px;
+        margin-bottom: 0.5em;
+        color: #E3E3E3;
+      }
     }
 }
+
+.carousel-indicators [data-bs-target] {
+  border-radius: 50% !important;
+  width: 7px !important;
+  height: 7px !important;
+  background-color: #AAAC1B !important;
+}
+
+.carousel-indicators .active {
+  background-color: #53540D !important;
+}
+
+mat-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(4) translate(-10%, -10%);
+  color: #E3E3E3;
+}
+
+// TODO: adapter au tailles réduites d'écran les endroits où y'a calc .. utilisant des px ..

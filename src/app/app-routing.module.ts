@@ -11,6 +11,7 @@ import { FeedComponent } from './pages/feed/feed.component';
 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'feed', component: FeedComponent },
   { path: 'signup', component: SignupComponent },
