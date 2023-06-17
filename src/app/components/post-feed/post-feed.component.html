@@ -1,0 +1,9 @@
+<div class="news-feed-section">
+  <h2>Actualités</h2>
+  <div class="feed-post" *ngFor="let post of all_posts">
+    <h3 class="feed-post-title">{{ post.title }}</h3>
+    <p>Le {{ post.creationdate.toLocaleString() }}, par TODO</p>
+    <p>{{ post.description }}</p>
+    <img *ngIf="post.url_image.length != 0" src="{{ post.url_image }}" class="feed-post-image" />
+  </div>
+</div>

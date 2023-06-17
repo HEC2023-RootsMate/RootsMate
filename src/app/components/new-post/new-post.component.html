@@ -1,0 +1,23 @@
+<div class="new-post-section">
+    <h2>Nouvelle publication</h2>
+
+    <form (ngSubmit)="onSubmit()" class="profile-form">
+        <div class="form-group">
+            <label for="title">Titre:</label>
+            <input id="title" [(ngModel)]="new_post.title" name="title">
+        </div>
+
+        <div class="form-group">
+            <label for="picture">URL de l'illustration de la publication:</label>
+            <input id="picture" [(ngModel)]="new_post.url_image" name="picture">
+        </div>
+
+        <div class="form-group">
+            <label for="contents">Contenu de la publication:</label>
+            <textarea id="contents" [(ngModel)]="new_post.description" name="contents">
+            </textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Publier</button>
+    </form>
+</div>
