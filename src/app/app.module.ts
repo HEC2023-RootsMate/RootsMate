@@ -11,6 +11,7 @@ import { FeedComponent } from './pages/feed/feed.component';
 import { LocationsComponent } from './pages/locations/locations.component';
 import { UserprofileComponent } from './pages/userprofile/userprofile.component';
 import { LocationsDetailComponent } from './pages/locations/locations-detail/locations-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LocationsDetailComponent } from './pages/locations/locations-detail/loc
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
