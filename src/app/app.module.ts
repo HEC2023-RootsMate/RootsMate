@@ -15,11 +15,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatCardModule } from '@angular/material/card';
 
 import { FormsModule } from '@angular/forms';
-import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ComponentsModule } from './components/components.module';
 import { ServicesModule } from './services/services.module';
 
+import { AosDirective } from './pages/aos.directive';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { ServicesModule } from './services/services.module';
     FeedComponent,
     LocationsComponent,
     UserprofileComponent,
-    LocationsDetailComponent
+    LocationsDetailComponent,
+    AosDirective
   ],
   imports: [
     AppRoutingModule,
@@ -42,7 +46,12 @@ import { ServicesModule } from './services/services.module';
     MatFormFieldModule,
     MatInputModule,
     ComponentsModule,
-    ServicesModule
+    ServicesModule,
+    MatToolbarModule,
+    MatIconModule
+  ],
+  exports: [
+    AosDirective
   ],
   bootstrap: [AppComponent]
 })

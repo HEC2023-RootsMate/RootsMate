@@ -1,14 +1,32 @@
 <div class="home-container">
-	<div class="title">
-	  RootsMate
-	</div>
-	<div class="header">
-	  <div class="header-title">
-		Connectez-vous à la communauté florissante du jardinage et partagez vos passions végétales avec le monde entier !
-	  </div>
+	<div class="main-header">
+		<mat-toolbar>
+			<span>Rootmates</span>
+			<span class="spacer"></span>
+			<button mat-icon-button onclick="alert('tic')">
+			  Se connecter
+			</button>
+			<button mat-icon-button onclick="alert('tac')">
+			  S'inscrire
+			</button>
+		  </mat-toolbar>
+		<div class="title"
+		data-aos="fade-down">
+		  Root
+		  <br>
+		  mates
+		</div>
+		<div class="header">
+		  <div class="header-title">
+			Connectez-vous à la communauté florissante du jardinage et partagez vos passions végétales avec le monde entier !
+		  </div>
+		</div>
 	</div>
   
 	<div class="content">
+		<div class="content-title">
+			Les jardins
+		</div>
 	  <div class="carousel">
 		<ngb-carousel *ngIf="images">
 		  <ng-template *ngFor="let image of images" ngbSlide>
@@ -16,11 +34,70 @@
 			  <div class="image-container">
 				<img [src]="image.src" class="carousel-image" />
 			  </div>
-			  <h3>{{ image.text }}</h3>
+			  	<div style="margin-left: 5px;">
+				  {{ image.text }}
+				</div>
+				<div style="font-size: 0.7em; margin-left: 15px;">
+					{{ image.owner }}
+				</div>
 			</div>
 		  </ng-template>
 		</ngb-carousel>
 	  </div>
+	  <div class="functionalities">
+		<div class="first" data-aos="fade-up" data-aos-duration="1000">
+			<div class="functionality-icon">
+				<mat-icon>people</mat-icon>
+			</div>
+			<div class="functionality">
+				<div class="functionality-title">
+					Je partage mon terrain
+				</div>
+				<div class="functionality-content">
+					Tu as un terrain et tu souhaites le partager pour en faire profiter des personnes qui n’en ont pas, permettre à ton terrain de nourrir plus de monde et au passage que le potager te prenne moins de temps ?
+				</div>
+			</div>
+		</div>
+		<div class="first" data-aos="fade-up" data-aos-duration="2000">
+			<div class="functionality-icon">
+				<mat-icon> local_florist</mat-icon>
+			</div>
+			<div class="functionality">
+				<div class="functionality-title">
+					Je cherche un terrain
+				</div>
+				<div class="functionality-content">
+					Tu n’as pas d’espace extérieur chez toi mais tu aimerais vraiment faire pousser des légumes pour pouvoir les manger, que tu aies de l’expérience ou non, tu peux me greffer à un jardin partagé ! → Lance une recherche des jardins près de chez toi !
+				</div>
+			</div>
+		</div>
+		<div class="first" data-aos="fade-up" data-aos-duration="2500">
+			<div class="functionality-icon">
+				<mat-icon>favorite_border</mat-icon>
+			</div>
+			<div class="functionality">
+				<div class="functionality-title">
+					J’échange des trucs et astuces
+				</div>
+				<div class="functionality-content">
+					Tu trouveras ici une communauté avec des expertises très larges, besoin d’un conseil pour garantir le bien-être de ton citronnier alsacien ? D’infos sur la permaculture ? De conseils sur l’outillage ?  → Viens découvrir les membres et discuter avec eux !
+				</div>
+			</div>
+		</div>
+	  </div>
 	</div>
+
+	<div class="join-us">
+
+		<div class="title2" data-aos="fade-right" data-aos-duration="1000">
+			Envie de nous rejoindre ?
+		</div>
+		<button class="btn-join" data-aos="fade-right" data-aos-duration="1000" onclick="alert('yoo')">
+			S'inscrire
+		</button>
+		<button class="btn-join" data-aos="fade-right" data-aos-duration="1000" onclick="alert('plouf')">
+			Se connecter 
+		</button>
+	  </div>
   </div>
   
