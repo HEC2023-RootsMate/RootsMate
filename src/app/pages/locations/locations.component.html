@@ -1,1 +1,19 @@
-<p>locations works!</p>
+<div class="locations">
+    <form>
+        <mat-form-field class="search" appearance="outline">
+            <input matInput placeholder="Ex. 6700, strasbourg" value="Strasbourg">
+        </mat-form-field>
+    </form>
+
+    <div class="locations-display">
+        <div *ngFor="let location of locations" class="location-card">
+            <!-- <h3>{{ location.name }}</h3> -->
+            <mat-card>
+                <img [src]="location.url_image" alt="{{ location.name }}" (click)="onViewDetails(location.id_location)">
+            </mat-card>
+
+            <!-- <p>{{ location.description }}</p> -->
+
+        </div>
+    </div>
+</div>

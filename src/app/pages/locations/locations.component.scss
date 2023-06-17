@@ -1,0 +1,30 @@
+.search {
+    width: auto;
+    max-width: 400px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::ng-deep .search {
+    border-radius: 28px 0 0 28px !important;
+    min-width: 28px !important;
+}
+
+h1 {
+    color: #1e3932;
+    text-align: center;
+}
+
+
+.locations {
+    padding: 30px;
+    max-width: 400px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.location-card {
+    margin-bottom: 30px;
+}
