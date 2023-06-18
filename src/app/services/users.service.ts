@@ -50,4 +50,15 @@ export class UsersService implements OnInit {
     }
     return false;
   }
+
+  getById(id: Number): User | null {
+    const allUsers = this.getAll();
+    for (let [_username, user] of Object.entries(allUsers)) {
+      if (user.id_user === id) {
+        return user;
+      }
+    }
+
+    return null;
+  }
 }

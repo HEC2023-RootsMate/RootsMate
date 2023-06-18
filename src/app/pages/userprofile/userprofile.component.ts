@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { User } from '../../models/user.model';
 import { Location } from '../../models/location.model';
 import { LocationUser } from '../../models/location-user.model';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-userprofile',
@@ -16,7 +17,7 @@ export class UserprofileComponent implements OnInit {
   locations: Location[] = [];
   locationUsers: LocationUser[] = [];
   followedUsers: User[] = [];
-  constructor(private router: Router) { }
+  constructor(private router: Router, private usersService: UsersService) { }
   showContainer1: boolean = true;
 
   ngOnInit() {
@@ -26,11 +27,6 @@ export class UserprofileComponent implements OnInit {
       this.user = JSON.parse(userData);
     } else {
       this.router.navigate(['/signin']);
-    }
-
-    const usersData = localStorage.getItem('users');
-    if (usersData) {
-      this.users = JSON.parse(usersData);
     }
 
     const locationUsersData = localStorage.getItem('locationUsers');
@@ -113,23 +109,7 @@ export class UserprofileComponent implements OnInit {
 
 
   getUsernameById(id: number): string {
-    for (let i = 0; i < localStorage.length; i++) {
-      const username = localStorage.key(i);
-
-      if (username) {
-        const userItem = localStorage.getItem(username);
-
-        if (userItem) {
-          const user = JSON.parse(userItem);
-
-          if (user && user.id_user === id) {
-            return user.username;
-          }
-        }
-      }
-    }
-
-    return '';
+    return this.usersService.getById(id)?.username ?? '';
   }
 
   getUserNameByLocationId(id: number): string {
