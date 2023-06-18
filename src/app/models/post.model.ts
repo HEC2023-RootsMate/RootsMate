@@ -7,6 +7,7 @@ export class Post {
         public creationdate: Date,
         public id_user: number,
         public id_location: number | null,
-        public id_postparent: number | null
+        public id_postparent: number | null,
+
     ) { }
 }
