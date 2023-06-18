@@ -22,3 +22,106 @@
       align-content: center;
     }
 }
+
+
+.location-card-comment button {
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.location-card-comment {
+    background: #E3E3E3;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+
+
+input,
+textarea,
+button {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+    box-shadow: -4px 4px 0px rgba(127, 129, 20, 0.5);
+    border: none;
+    outline: none;
+}
+
+input,
+button {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+    box-shadow: -4px 4px 0px rgba(127, 129, 20, 0.5);
+    border: none;
+    outline: none;
+
+}
+
+
+
+
+button {
+    background: #7F8114;
+    border-radius: 1.2rem;
+    height: 2.4rem;
+    cursor: pointer;
+    color: #E3E3E3;
+
+}
+
+input,
+textarea {
+    background: #E9D781;
+    border-radius: 1.2rem;
+    height: 2.4rem;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    height: 6rem;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-family: 'Basteleur-Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+        flex: 1;
+        margin-right: 0.5rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
