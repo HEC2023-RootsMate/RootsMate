@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { User } from '../../models/user.model';
 import { Location } from '../../models/location.model';
 import { LocationUser } from '../../models/location-user.model';
-import { UsersService } from 'src/app/services/users.service';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-userprofile',
