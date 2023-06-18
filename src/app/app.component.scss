@@ -35,11 +35,15 @@
 
 .home-sidenav {
   padding: 20px;
-    font-family: 'Basteleur-Bold';
-    src: url('../assets/fonts/Basteleur-Bold.ttf');
+  font-family: 'Basteleur-Bold';
 }
 
 @font-face {
     font-family: 'DM-Sans';
     src: url('../assets/fonts/DMSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Basteleur-Bold';
+  src: url('../assets/fonts/Basteleur-Bold.ttf')
 }
