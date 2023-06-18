@@ -1,6 +1,7 @@
 <div class="new-post-section">
-    <h2>Nouvelle publication</h2>
-
+    <div class="user-profile-mini">
+        <img [src]="currentUser.picture" class="user-img">
+    </div>
     <form (ngSubmit)="onSubmit()" class="profile-form">
         <mat-form-field>
             <mat-label for="title">Titre:</mat-label>

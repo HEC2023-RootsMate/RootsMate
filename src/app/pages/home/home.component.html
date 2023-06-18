@@ -2,10 +2,10 @@
 	<div class="main-header">
 		<mat-toolbar>
 			<span class="spacer"></span>
-			<button mat-icon-button onclick="alert('tic')">
+			<button mat-icon-button [routerLink]="'/signin'">
 			  Se connecter
 			</button>
-			<button mat-icon-button onclick="alert('tac')">
+			<button mat-icon-button [routerLink]="'/signup'">
 			  S'inscrire
 			</button>
 		  </mat-toolbar>
