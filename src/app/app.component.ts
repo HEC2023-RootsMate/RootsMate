@@ -11,8 +11,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 
 export class AppComponent implements OnInit {
   user: User = new User(0, '', '', '', '', '', '');
-  route: String = "";
-  showFiller = true;
+  showFiller = false;
 
   constructor(private router: Router ) {
 
@@ -20,8 +19,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     const title = 'RootsMate';
-
-    this.route = this.router.url;
 
     const userData = localStorage.getItem('currentUser');
     if (userData) {

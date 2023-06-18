@@ -1,7 +1,6 @@
 <div class="home-container">
 	<div class="main-header">
 		<mat-toolbar>
-			<span>Rootmates</span>
 			<span class="spacer"></span>
 			<button mat-icon-button onclick="alert('tic')">
 			  Se connecter
@@ -92,10 +91,10 @@
 		<div class="title2" data-aos="fade-right" data-aos-duration="1000">
 			Envie de nous rejoindre ?
 		</div>
-		<button class="btn-join" data-aos="fade-right" data-aos-duration="1000" onclick="alert('yoo')">
+		<button class="btn-join" data-aos="fade-right" data-aos-duration="1000" [routerLink]="'/signup'">
 			S'inscrire
 		</button>
-		<button class="btn-join" data-aos="fade-right" data-aos-duration="1000" onclick="alert('plouf')">
+		<button class="btn-join" data-aos="fade-right" data-aos-duration="1000" [routerLink]="'/signin'">
 			Se connecter 
 		</button>
 	  </div>
