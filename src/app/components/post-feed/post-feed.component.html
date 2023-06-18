@@ -1,9 +1,21 @@
 <div class="news-feed-section">
   <h2>Actualités</h2>
   <div class="feed-post" *ngFor="let post of all_posts">
-    <h3 class="feed-post-title">{{ post.title }}</h3>
-    <p>Le {{ post.creationdate.toLocaleString() }}, par TODO</p>
-    <p>{{ post.description }}</p>
-    <img *ngIf="post.url_image.length != 0" src="{{ post.url_image }}" class="feed-post-image" />
+    <mat-card class="post-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ post.title }}</mat-card-title>
+        <mat-card-subtitle>Le {{ post.creationdate.toLocaleString() }}, par TODO</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image *ngIf="post.url_image.length != 0" src="{{ post.url_image }}" class="feed-post-image" />
+      <mat-card-content>
+        <p>{{ post.description }}</p>
+      </mat-card-content>
+      <mat-card-actions class="post-actions">
+        <button mat-button>Like</button>
+        <button mat-button>Partage</button>
+        <button mat-button>Commenter</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>
