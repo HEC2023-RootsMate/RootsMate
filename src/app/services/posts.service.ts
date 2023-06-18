@@ -19,13 +19,23 @@ export class PostsService {
   }
 
   getAll(): Post[] {
+    const filteredPosts: Post[] = [];
     let posts = localStorage.getItem('posts') ?? '[]';
-    return JSON.parse(posts);
+    if(posts) {
+      const postList = JSON.parse(posts);
+      postList.forEach((post: Post) =>  {
+        if(!post.id_location) {
+          filteredPosts.push(post);
+        }
+      })
+    }
+
+    return filteredPosts;
   }
 
   add(post: Post) {
     post.id_post = this.postCounter;
-    post.id_user = this.user.id_user;
+    post.id_user = post.id_user;
     post.creationdate = new Date();
 
     this.postCounter += 1;

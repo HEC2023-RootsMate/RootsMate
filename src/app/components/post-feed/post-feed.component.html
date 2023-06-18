@@ -2,9 +2,11 @@
   <div class="feed-post" *ngFor="let post of all_posts; let i = index">
     <mat-card class="post-card" >
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
+        <img mat-card-avatar src="{{ getAvatarUrlById(post.id_user) }}" class="profile-picture">
         <mat-card-title>{{ post.title }}</mat-card-title>
-        <mat-card-subtitle>Le {{ post.creationdate.toLocaleString() }}, par TODO</mat-card-subtitle>
+        <mat-card-subtitle>Le {{ post.creationdate.toLocaleString() }}, par 
+          <a href="userprofile/">{{ getUsernameById(post.id_user) }}</a>
+        </mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image *ngIf="post.url_image.length != 0" src="{{ post.url_image }}" class="feed-post-image" />
       <mat-card-content>
