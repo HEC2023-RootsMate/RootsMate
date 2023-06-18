@@ -1,22 +1,19 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsersService implements OnInit {
+export class UsersService {
   idCounter: number = 0;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
     let idCounter = localStorage.getItem('idCounter');
-    if (!idCounter) {
-      idCounter = '1';
-    } else {
-      idCounter = (Number(idCounter) + 1).toString();
+    if (idCounter == null) {
+      idCounter = '0';
+      localStorage.setItem('idCounter', idCounter);
     }
-    localStorage.setItem('idCounter', idCounter);
+    this.idCounter = (Number(idCounter));
   }
 
   getAll(): { [name: string]: User } {
