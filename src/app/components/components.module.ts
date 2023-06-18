@@ -7,13 +7,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { NewPostComponent } from './new-post/new-post.component';
 import { PostFeedComponent } from './post-feed/post-feed.component';
 import { FormsModule } from '@angular/forms';
+import { LogoutComponent } from '../logout/logout.component';
 
 
 
 @NgModule({
   declarations: [
     NewPostComponent,
-    PostFeedComponent
+    PostFeedComponent,
+    LogoutComponent
   ],
   exports: [
     NewPostComponent,
