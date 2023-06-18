@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../../models/user.model';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-signup',
@@ -11,19 +11,10 @@ import { User } from '../../models/user.model';
 export class SignupComponent {
   user = new User(0, '', '', '', '', 'https://i.stack.imgur.com/34AD2.jpg', '');
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private usersService: UsersService) { }
 
   onSubmit() {
-    let idCounter = localStorage.getItem('idCounter');
-    if (!idCounter) {
-      idCounter = '1';
-    } else {
-      idCounter = (Number(idCounter) + 1).toString();
-    }
-    localStorage.setItem('idCounter', idCounter);
-
-    this.user.id_user = Number(idCounter);
-    localStorage.setItem(this.user.username, JSON.stringify(this.user));
+    this.usersService.add(this.user);
     this.router.navigate(['/signin']);
   }
 }

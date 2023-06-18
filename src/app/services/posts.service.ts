@@ -1,17 +1,15 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Post } from '../models/post.model';
 import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostsService implements OnInit {
+export class PostsService {
   user: User = new User(0, '', '', '', '', '', '');
   postCounter: number = 0;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
     let postCounter = localStorage.getItem('postCounter');
     if (!postCounter) {
       postCounter = '0';
