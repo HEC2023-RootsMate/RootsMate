@@ -1,14 +1,16 @@
-<div>
-    <h1>Connexion</h1>
-    <form (ngSubmit)="onSubmit()" #signInForm="ngForm">
-        <div>
-            <label for="username">Nom d'utilisateur:</label>
-            <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
-        </div>
-        <div>
-            <label for="password">Mot de passe:</label>
-            <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
-        </div>
-        <button type="submit" [disabled]="!signInForm.form.valid">Se connecter</button>
-    </form>
-</div>
+<div class="page-container">
+    <div>
+        <form (ngSubmit)="onSubmit()" #signInForm="ngForm">
+            <h1>Connexion</h1>
+            <div class="input-container">
+                <label for="username">Nom d'utilisateur:</label>
+                <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
+            </div>
+            <button type="submit" [disabled]="!signInForm.form.valid">Se connecter</button>
+        </form>
+        <div class="rootmate"><span style="font-size: 1.7rem ;">Root</span><br>mate</div>
+    </div>

@@ -1,0 +1,219 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 2rem;
+    background-image: url('../../../../assets/images/background/Plan_de_travail_1_copie_2.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.location-card-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #E3E3E3;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.location-card-main img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.location-card-main-name,
+.location-card-main-user,
+.location-card-main-description,
+.location-card-main-tags {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+}
+
+
+.location-card-main-date {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-style: italic;
+    font-size: 12px;
+}
+
+
+
+.location-main-name {
+    font-family: 'Basteleur-Bold';
+    font-style: normal;
+}
+
+.location-main-user {
+    font-family: 'Basteleur-Bold';
+    font-style: normal;
+}
+
+
+
+.location-card-comment button {
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.location-card-comment {
+    background: #E3E3E3;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+
+.location-card {
+    width: 60%;
+    margin: 0 auto;
+
+
+}
+
+
+.comment-card {
+    background: #E3E3E3;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+
+
+
+.comment-user-date {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.comment-content {
+    display: flex;
+}
+
+.comment-content img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    animation: slideInFromLeft 0.5s ease-out;
+    animation-fill-mode: backwards;
+    width: 100%;
+
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+    box-shadow: -4px 4px 0px rgba(127, 129, 20, 0.5);
+    border: none;
+    outline: none;
+}
+
+input,
+button {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.5rem 0;
+    box-shadow: -4px 4px 0px rgba(127, 129, 20, 0.5);
+    border: none;
+    outline: none;
+
+}
+
+
+
+
+button {
+    background: #7F8114;
+    border-radius: 1.2rem;
+    height: 2.4rem;
+    cursor: pointer;
+    color: #E3E3E3;
+
+}
+
+input,
+textarea {
+    background: #E9D781;
+    border-radius: 1.2rem;
+    height: 2.4rem;
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    height: 6rem;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-family: 'Basteleur-Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+        flex: 1;
+        margin-right: 0.5rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

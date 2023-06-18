@@ -1,7 +1,44 @@
-<div *ngIf="location">
-    <h1>{{ location.name }}</h1>
-    <img [src]="location.url_image" alt="{{ location.name }}">
-    <p>{{ location.description }}</p>
-    <p>Tags: {{ location.tags.join(', ') }}</p>
-    <p>Date de création : {{ location.createdate | date:'longDate' }}</p>
+<div class="page">
+
+    <div *ngIf="location" class="location-card">
+        <div class="location-card-main">
+            <h1 class="location-card-main-name">{{ location.name }}</h1>
+            <img [src]="location.url_image" alt="{{ location.name }}">
+            <p class="location-card-main-description">{{ location.description }}</p>
+            <p class="location-card-main-tags">Tags: {{ location.tags.join(', ') }}</p>
+            <p class="location-card-main-date">Date de création : {{ location.createdate | date:'dd/MM/yyyy' }}</p>
+        </div>
+
+        <div class="location-card-comment">
+            <form (ngSubmit)="onAddComment()">
+                <div class="input-container">
+                    <div class="input-row">
+                        <input type="text" [(ngModel)]="commentTitle" name="commentTitle" placeholder="Titre">
+                        <input type="text" [(ngModel)]="commentImage" name="commentImage" placeholder="URL de l'image">
+                    </div>
+                    <textarea [(ngModel)]="commentText" name="commentText" placeholder="Commentaire"></textarea>
+                </div>
+                <button type="submit">Publier</button>
+            </form>
+        </div>
+
+
+        <div class="comment-card" *ngFor="let comment of comments">
+            <div class="comment-header">
+                <h3>
+                    {{ comment.title }}
+                    <span class="comment-user-date">
+                        par <em>{{ getUserNameById(comment.id_user) }}</em> le <em>{{ comment.creationdate |
+                            date:'dd/MM/yyyy' }}</em>
+                    </span>
+                </h3>
+            </div>
+            <div class="comment-content">
+                <img [src]="comment.url_image" alt="{{ comment.title }}">
+                <p>{{ comment.description }}</p>
+            </div>
+        </div>
+
+
+    </div>
 </div>

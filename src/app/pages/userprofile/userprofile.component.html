@@ -1,60 +1,86 @@
-<div class="profile-section">
-    <h2>Votre Profil</h2>
-    <img [src]="user.picture" alt="Image de profil" class="profile-picture">
+<div class="page">
 
-    <form (ngSubmit)="onUpdateProfile()" class="profile-form">
-        <div class="form-group">
-            <label for="username">Nom d'utilisateur:</label>
-            <input id="username" [(ngModel)]="user.username" name="username">
-        </div>
+    <div id="page-container1" class="page-container"
+        [ngClass]="{'slide-in': showContainer1, 'slide-out': !showContainer1}">
 
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input id="email" [(ngModel)]="user.email" name="email">
-        </div>
+        <form (ngSubmit)="onUpdateProfile()" class="profile-form">
+            <img [src]="user.picture" alt="Image de profil" class="profile-picture">
+            <h1>Mon Profil</h1>
+            <div class="input-container">
+                <label for="username">Nom d'utilisateur:</label>
+                <input id="username" [(ngModel)]="user.username" name="username">
+            </div>
 
-        <div class="form-group">
-            <label for="zipcode">Code Postal:</label>
-            <input id="zipcode" [(ngModel)]="user.zipcode" name="zipcode">
-        </div>
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input id="email" [(ngModel)]="user.email" name="email">
+            </div>
 
-        <div class="form-group">
-            <label for="picture">URL de l'image de profil:</label>
-            <input id="picture" [(ngModel)]="user.picture" name="picture">
-        </div>
+            <div class="input-container">
+                <label for="zipcode">Code Postal:</label>
+                <input id="zipcode" [(ngModel)]="user.zipcode" name="zipcode">
+            </div>
 
-        <button type="submit" class="btn-submit">Mettre à jour le profil</button>
-    </form>
-</div>
+            <div class="input-container">
+                <label for="picture">URL de l'image :</label>
+                <input id="picture" [(ngModel)]="user.picture" name="picture">
+            </div>
 
-<div class="location-section">
-    <h2>Ajouter un Lieu</h2>
-    <form (ngSubmit)="onAddLocation()" class="location-form">
-        <div class="form-group">
-            <label for="location-name">Nom du lieu:</label>
-            <input id="location-name" [(ngModel)]="location.name" name="name">
-        </div>
+            <button type="submit" class="btn-submit">Mettre à jour le profil</button>
+        </form>
 
-        <div class="form-group">
-            <label for="location-image">URL de l'image du lieu:</label>
-            <input id="location-image" [(ngModel)]="location.url_image" name="url_image">
-        </div>
+        <form (ngSubmit)="onAddLocation()" class="location-form">
+            <h1>Ajouter un Lieu</h1>
+            <div class="input-container">
+                <label for="location-name">Nom du lieu:</label>
+                <input id="location-name" [(ngModel)]="location.name" name="name">
+            </div>
 
-        <div class="form-group">
-            <label for="location-description">Description:</label>
-            <textarea id="location-description" [(ngModel)]="location.description" name="description"></textarea>
-        </div>
+            <div class="input-container">
+                <label for="location-image">URL de l'image du lieu:</label>
+                <input id="location-image" [(ngModel)]="location.url_image" name="url_image">
+            </div>
 
-        <button type="submit" class="btn-submit">Ajouter le lieu</button>
-    </form>
-</div>
+            <div class="input-container">
+                <label for="location-description">Description:</label>
+                <textarea id="location-description" [(ngModel)]="location.description" name="description"></textarea>
+            </div>
 
-<div class="locations-display">
-    <div *ngFor="let location of locations" class="location-card">
-        <h3>{{ location.name }}</h3>
-        <img [src]="location.url_image" alt="{{ location.name }}">
-        <p>{{ location.description }}</p>
-        <button class="btn-detail" (click)="onViewDetails(location.id_location)">Détails</button>
-        <button class="btn-delete" (click)="onDeleteLocation(location.id_location)">Supprimer</button>
+            <button type="submit" class="btn-submit">Ajouter le lieu</button>
+        </form>
     </div>
+
+
+
+    <div id="page-container2" class="page-container2"
+        [ngClass]="{'slide-in': !showContainer1, 'slide-out': showContainer1}">
+
+
+        <div *ngFor="let location of locations" class="location-card">
+            <img [src]="location.url_image" alt="{{ location.name }}" class="location-image">
+            <h3 class="location-name">{{ location.name }}</h3>
+            <p class="location-user">
+                Propriétaire: {{ getUserNameByLocationId(location.id_location) }}
+                <span style="font-style: italic; font-size: 70%;"> - ajouté le : {{ location.createdate |
+                    date:'dd/MM/yyyy' }}</span>
+            </p>
+            <p class="location-description">{{ location.description }}</p>
+            <div class="button-container">
+                <button class="btn-detail" (click)="onViewDetails(location.id_location)">Détails</button>
+
+
+                <button *ngIf="isCurrentUserOwner(location)" class="btn-delete"
+                    (click)="onDeleteLocation(location.id_location)">Supprimer</button>
+
+
+                <button *ngIf="!isCurrentUserOwner(location)" class="btn-unfollow"
+                    (click)="onUnfollowLocation(location.id_location)">Ne plus suivre</button>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <button class="switch-btn" (click)="toggleContainer()">&#8646;</button>
 </div>

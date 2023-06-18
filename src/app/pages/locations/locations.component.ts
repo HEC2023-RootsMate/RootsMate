@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
   templateUrl: './locations.component.html',
   styleUrls: ['./locations.component.scss'],
 })
-export class LocationsComponent implements OnInit{
+export class LocationsComponent implements OnInit {
   locations: Location[] = [];
   constructor(private router: Router) { }
-  
+
 
   ngOnInit() {
     const locationsData = localStorage.getItem('locations');
