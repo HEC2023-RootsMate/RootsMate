@@ -6,13 +6,13 @@
     <div class="home-sidenav-content">
         <div *ngIf="user.picture">
             <img [src]="user.picture" alt="Image de profil" class="icons profile-picture"
-            (click)="drawer.toggle()" />
+            [routerLink]="'/userprofile'"  />  <!--(click)="drawer.toggle()"-->
 
             <img [src]="'../../../assets/icons/locations.jpg'"  alt="Image de location" class="icons locations-picture"
             [routerLink]="'/locations'" />
 
             <img [src]="'../../../assets/icons/users.jpg'" alt="Image de user" class="icons users-picture"
-            [routerLink]="'/users'" />
+            [routerLink]="'/feed'" />
         </div>
     </div>
   

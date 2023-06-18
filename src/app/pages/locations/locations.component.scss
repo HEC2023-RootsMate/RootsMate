@@ -8,6 +8,10 @@ mat-form-field {
     min-width: 28px !important;
   }
 
+h1 {
+  font-family: 'Basteleur-Bold';
+}
+
 .map {
     // width: 70%;
     max-width: 450px;
@@ -43,7 +47,7 @@ h1 {
 }
 
 .locations-display {
-    max-width: 400px;
+    max-width: 423px;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -57,4 +61,8 @@ h1 {
   max-width: 450px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.ImgCard {
+  max-width: 450px;
 }
