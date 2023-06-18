@@ -1,0 +1,24 @@
+.new-post-section {
+    display: flex;
+    justify-content: center;
+    padding: 6em 0 1em 0;
+    .user-profile-mini {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        position: relative;
+    }
+
+    .user-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .profile-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+    }
+}

@@ -1,23 +1,24 @@
 <div class="new-post-section">
-    <h2>Nouvelle publication</h2>
-
+    <div class="user-profile-mini">
+        <img [src]="currentUser.picture" class="user-img">
+    </div>
     <form (ngSubmit)="onSubmit()" class="profile-form">
-        <div class="form-group">
-            <label for="title">Titre:</label>
-            <input id="title" [(ngModel)]="new_post.title" name="title">
-        </div>
+        <mat-form-field>
+            <mat-label for="title">Titre:</mat-label>
+            <input id="title" [(ngModel)]="new_post.title" name="title" matInput>
+        </mat-form-field>
 
-        <div class="form-group">
-            <label for="picture">URL de l'illustration de la publication:</label>
-            <input id="picture" [(ngModel)]="new_post.url_image" name="picture">
-        </div>
+        <mat-form-field>
+            <mat-label for="picture">URL de l'illustration de la publication:</mat-label>
+            <input id="picture" [(ngModel)]="new_post.url_image" name="picture" matInput>
+        </mat-form-field>
 
-        <div class="form-group">
-            <label for="contents">Contenu de la publication:</label>
-            <textarea id="contents" [(ngModel)]="new_post.description" name="contents">
+        <mat-form-field>
+            <mat-label for="contents">Contenu de la publication:</mat-label>
+            <textarea id="contents" [(ngModel)]="new_post.description" name="contents" matInput>
             </textarea>
-        </div>
+        </mat-form-field>
 
-        <button type="submit" class="btn-submit">Publier</button>
+        <button type="submit" class="btn-submit" mat-button>Publier</button>
     </form>
 </div>
