@@ -12,13 +12,18 @@
     <div class="locations-display">
         <div *ngFor="let location of locations" class="location-card">
 
-            <img [src]="location.url_image" alt="{{ location.name }}" (click)="onViewDetails(location.id_location)" class="ImgCard">
+            <mat-card class="gardenCard">
 
-            <!-- <mat-card class="gardenCard">
                 <div class="ImgCard">
-                    <img [src]="location.url_image" alt="{{ location.name }}" (click)="onViewDetails(location.id_location)" class="ImgCard">
+                    <img [src]="location.url_image" alt="{{ location.name }}"
+                        (click)="onViewDetails(location.id_location)" class="ImgCard">
                 </div>
-            </mat-card> -->
+
+                <div class="cardContent">
+                    <h2>{{ location.name }}</h2>
+                    <p>{{ location.description }}</p>
+                </div>
+            </mat-card>
 
         </div>
     </div>

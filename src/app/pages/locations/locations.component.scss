@@ -1,60 +1,63 @@
+
 mat-form-field {
-    width: 100%;
-  }
-  
-  /* 1st solution - causes weird thing at the left side of input */
-  ::ng-deep .mat-form-field-outline-start {
-    border-radius: 28px 0 0 28px !important;
-    min-width: 28px !important;
-  }
+  width: 100%;
+}
+
+/* 1st solution - causes weird thing at the left side of input */
+::ng-deep .mat-form-field-outline-start {
+  border-radius: 28px 0 0 28px !important;
+  min-width: 28px !important;
+}
 
 h1 {
   font-family: 'Basteleur-Bold';
 }
 
 .map {
-    // width: 70%;
-    max-width: 450px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  // width: 70%;
+  max-width: 450px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .map img {
-    max-width: 100%;
-    height: auto;
-  }
+  max-width: 100%;
+  height: auto;
+}
 
 
 
 h1 {
-    color: #1e3932;
-    text-align: center;
+  color: #1e3932;
+  text-align: center;
 }
 
 
 .locations {
-    background-image: url('../../../assets/images/background/Plan_de_travail_1_copie_2.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+  background-image: url('../../../assets/images/background/Plan_de_travail_1_copie_2.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 
-    padding: 30px;
-    // max-width: 400px;
-    // margin-bottom: 30px;
-    // margin-left: auto;
-    // margin-right: auto;
+  background-color :E3E3E3;
+
+  padding: 30px;
+  // max-width: 400px;
+  // margin-bottom: 30px;
+  // margin-left: auto;
+  // margin-right: auto;
 }
 
 .locations-display {
-    max-width: 423px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 766px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .location-card {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .search {
@@ -63,6 +66,35 @@ h1 {
   margin-right: auto;
 }
 
-.ImgCard {
-  max-width: 450px;
+.gardenCard {
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px ;
+
 }
+
+.ImgCard {
+  display: inline-flex;
+  max-width: 343px;
+  border-top-left-radius: 20px ;
+  border-bottom-left-radius: 20px ;
+}
+
+h2 {
+  margin-left: 15px;
+  margin-top: 15px;
+
+  font-family: 'Basteleur-Bold';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+p {
+  margin-left: 15px;
+}
+
+::ng-deep .mat-card{
+  border-radius: 30px !important;
+ }
