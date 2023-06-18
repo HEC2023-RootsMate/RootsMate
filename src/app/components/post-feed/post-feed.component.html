@@ -1,7 +1,6 @@
 <div class="news-feed-section">
-  <h2>Actualités</h2>
-  <div class="feed-post" *ngFor="let post of all_posts">
-    <mat-card class="post-card">
+  <div class="feed-post" *ngFor="let post of all_posts; let i = index">
+    <mat-card class="post-card" >
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{ post.title }}</mat-card-title>
