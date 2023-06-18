@@ -1,4 +1,5 @@
 .page-container {
+    font-family: 'Work Sans', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,12 +90,14 @@ button {
     height: 2.4rem;
     cursor: pointer;
     color: #E3E3E3;
-
+    font-size: 14px
 }
 
 button:disabled {
-    background-color: #d6d6d6;
+    background-color: #c9c9c9;
+    color: #385956;
     cursor: not-allowed;
+
 }
 
 .rootmate {

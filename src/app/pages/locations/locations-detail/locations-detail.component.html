@@ -34,7 +34,7 @@
                 </h3>
             </div>
             <div class="comment-content">
-                <img [src]="comment.url_image" alt="{{ comment.title }}">
+                <img *ngIf="comment.url_image" [src]="comment.url_image" alt="{{ comment.title }}">
                 <p>{{ comment.description }}</p>
             </div>
         </div>

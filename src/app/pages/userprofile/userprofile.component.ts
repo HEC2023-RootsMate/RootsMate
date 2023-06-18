@@ -91,6 +91,7 @@ export class UserprofileComponent implements OnInit {
     localStorage.setItem('locationUsers', JSON.stringify(this.locationUsers));
 
     alert('Lieu créé avec succès');
+    this.toggleContainer();
   }
 
 
