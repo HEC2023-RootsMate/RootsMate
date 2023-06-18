@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '../../../models/location.model';
 import { Post } from '../../../models/post.model';
 import { User } from '../../../models/user.model';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-locations-detail',
@@ -17,7 +18,7 @@ export class LocationsDetailComponent implements OnInit {
   commentText: string = '';
   commentTitle: string = '';
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, private usersService: UsersService) { }
 
   ngOnInit(): void {
     const idParam = this.route.snapshot.paramMap.get('id');
@@ -87,16 +88,7 @@ export class LocationsDetailComponent implements OnInit {
   }
 
   getUserNameById(id: number): string {
-    const allKeys = Object.keys(localStorage);
-    for (let key of allKeys) {
-      if (localStorage.getItem(key)?.includes('id_user')) {
-        let user: User = JSON.parse(localStorage.getItem(key) || '');
-        if (user.id_user === id) {
-          return user.username;
-        }
-      }
-    }
-    return '';
+    return this.usersService.getById(id)?.username ?? "unknown";
   }
 
 }
